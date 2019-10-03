@@ -48,7 +48,7 @@
         <span class="txt">©2019 美团网 &nbsp;京ICP证070791号</span>
         <span class="line"></span>
       </div>
-     
+
     </div>
   </div>
 </template>
@@ -158,12 +158,14 @@
         /* height: 60px;
         line-height: 60px; */
         margin-bottom: .5rem;
+
         .line {
-            display: inline-block;
-            width: 500x;
-            border-top: 1px solid red;
+          display: inline-block;
+          width: 500x;
+          border-top: 1px solid red;
         }
-        .txt{
+
+        .txt {
           vertical-align: -4px;
         }
       }
