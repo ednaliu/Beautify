@@ -28,25 +28,25 @@
             el: '.swiper-pagination'
           },
         },
-        list: [{
-          id: '0001',
-          class: '#fd9d21',
-          desc: '美食'
+        "list": [{
+          "id": "0001",
+          "class": "#fd9d21",
+          "desc": "美食"
         },
         {
-          id: '0002',
-          class: '#ff6767',
-          desc: '猫眼电影'
+          "id": "0002",
+          "class": "#ff6767",
+          "desc": "猫眼电影"
         },
         {
-          id: '0003',
-          class: '#8a90fa',
-          desc: '酒店'
+          "id": "0003",
+          "class": "#8a90fa",
+          "desc": "酒店"
         },
         {
-          id: '0004',
-          class: '#fed030',
-          desc: '休闲娱乐'
+         "id": "0004",
+          "class": "#fed030",
+          "desc": "休闲娱乐"
         },
         {
           id: '0005',
@@ -121,7 +121,7 @@
     overflow: hidden;
     height: 0;
     width: 100%;
-    /* background-color: #ccc; */
+    background-color: #fff;
     padding-bottom: 48%;
 
     .whole {
