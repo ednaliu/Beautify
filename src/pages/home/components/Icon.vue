@@ -5,11 +5,12 @@
         <swiper-slide v-for='(page, index) in pages' :key='index'>
           <div class='whole'>
             <div class="iconall" v-for='item in page' :key='item.id'>
-              <!-- <div class="icon" :class='item.class'> -->
-              <div class="icon" :style='{backgroundColor:item.class}'>
-                <span class="iconfont icon-img">&#xe604;</span>
-              </div>
-              <p class="icon-desc">{{item.desc}}</p>
+              <router-link :to='/food/+item.id' >
+                <div class="icon" :style='{backgroundColor:item.class}'>
+                  <span class="iconfont icon-img">&#xe604;</span>
+                </div>
+                <p class="icon-desc">{{item.desc}}</p>
+            </router-link>
             </div>
           </div>
         </swiper-slide>
@@ -144,6 +145,9 @@
           width: .8rem;
           border-radius: .4rem;
           margin-bottom: .15rem;
+        }
+        .icon-desc{
+          color:#666;
         }
       }
     }
