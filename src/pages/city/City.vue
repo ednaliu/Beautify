@@ -17,7 +17,7 @@
     },
     data(){
       return{
-        cities:[]
+        cities:{}
       }
     },
     methods:{
@@ -25,7 +25,7 @@
         axios.get('/api/city.json')
         .then((res) => {
           let data = res.data.data
-          console.log(res.data)
+          // console.log(res.data)
           if(res.data.ret && data){
             this.cities = data.cities
           }

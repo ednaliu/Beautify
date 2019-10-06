@@ -1,37 +1,76 @@
 <template>
   <div class="food">
-    <div class="header">
-      <div class="header-search">
-        <div class="header-left">
-          <router-link to='/' tag='div'>
-            <span class="iconfont city">&#xe667;</span>
-          </router-link>
-        </div>
-        <div class="header-input">
-          <div class="iconfont inputicon">&#xe615;</div>
-          <div class="input">请输入商家名，品类，或者商圈...
-          </div>
-        </div>
-        <div class="header-right">
-          <div class="iconfont">&#xe63a;</div>
+    <div class="header-search" :class='background'>
+      <div class="header-left">
+        <router-link to='/' tag='div' >
+          <span class="iconfont city" :class='color'>&#xe667;</span>
+        </router-link>
+      </div>
+      <div class="header-input">
+        <div class="iconfont inputicon">&#xe615;</div>
+        <div class="input">请输入商家名，品类，或者商圈...
         </div>
       </div>
+      <div class="header-right">
+        <div class="iconfont" :class='color'>&#xe63a;</div>
+      </div>
     </div>
-  </div>
+    <div class="header" ref='header'>
+    </div>
   </div>
 </template>
 
 <script>
+    import {mapState, mapMutations} from 'vuex'
   export default {
-    name: 'FoodHeader'
+    name: 'FoodHeader',
+    data() {
+      return {
+        classcolor:'', //将头部字体图标颜色改变。
+        changebackground:'' //将头部背景色改变
+      }
+    },
+    computed:{
+    ...mapState(['color', 'background'])
+  },
+    methods: {
+      ...mapMutations(['changecolor']), 
+      handleScroll() {
+        const top = document.documentElement.scrollTop 
+        if(top>110){
+          this.changecolor({classcolor: 'color', changebackground: 'background'})
+          //classcolor 将头部字体图标颜色改变。
+          // changebackground 将头部背景色改变
+        }else{
+          this.changecolor({})
+        }
+      }
+    },
+    mounted() {
+      window.addEventListener('scroll', this.handleScroll)
+      // console.log(this.background +'header')
+    },
+    destoryed() {
+      window.removeEventListener('scroll', this.handleScroll)
+    }
   }
 
 </script>
 <style lang='less' scoped>
   .iconfont {
-    color: #fff;
+    color: #ccc;
     font-size: .4rem;
     font-weight: 700;
+
+  }
+  .color{
+    color: #06c1ae;
+  }
+  .changecolor{
+    color: #06c1ae;
+  }
+  .background{
+    background:#fff;
   }
 
   .inputicon {
@@ -47,37 +86,37 @@
       background-size: cover;
       background-repeat: repeat;
       border-bottom: 1px solid #DDD8CE;
+    }
 
-      .header-search {
-        height: .9rem;
-        width: 100%;
+    .header-search {
+      height: .9rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      z-index: 999;
+      .header-left {}
+
+      .header-input {
         display: flex;
-        justify-content: space-around;
+        flex: 0 0 75%;
         align-items: center;
-        position: absolute;
-        top: .015rem;
+        background-color: #ebeced;
+        padding: .1rem;
+        box-sizing: border-box;
+        border-radius: 11.3rem;
+      }
 
-        .header-left {
-          width: 1.05rem;
-        }
+      .header-right {
+        /* margin-left: .2rem; */
+        /* color: red; */
 
-        .header-input {
-          display: flex;
-          flex: 1;
-          align-items: center;
-          background-color: #fff;
-          padding: .1rem;
-          border-radius: .3rem;
-        }
-
-        .header-right {
-          width: 1.05rem;
-          margin-left: .2rem;
-          color: red;
-
-          .header-right-img {
-            height: .47rem;
-          }
+        .header-right-img {
+          height: .47rem;
         }
       }
     }

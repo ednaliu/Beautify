@@ -42,7 +42,7 @@
   export default {
     name :'CityContend',
     props:{
-      cities:Array
+      cities:Object
     }
   }
 
