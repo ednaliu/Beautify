@@ -1,0 +1,161 @@
+{
+  "ret": true,
+  "data": {
+    "list": [{
+      "id": "0001",
+      "class": "#fd9d21",
+      "desc": "美食"
+    },
+    {
+      "id": "0002",
+      "class": "#ff6767",
+      "desc": "猫眼电影"
+    },
+    {
+      "id": "0003",
+      "class": "#8a90fa",
+      "desc": "酒店"
+    },
+    {
+      "id": "0004",
+      "class": "#fed030",
+      "desc": "休闲娱乐"
+    },
+    {
+      "id": "0005",
+      "class": "#fd9d21",
+      "desc": "外卖"
+    },
+    {
+      "id": "0006",
+      "class": "#fed030",
+      "desc": "KTV"
+    },
+    {
+      "id": "0007",
+      "class": "#4dc6ee",
+      "desc": "周边游"
+    },
+    {
+      "id": "0008",
+      "class": "#ff80c2",
+      "desc": "丽人"
+    }
+    ],"city":"北京",
+    "foodList": [{
+        "id": "0001",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },
+      {
+        "id": "0002",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },{
+        "id": "0003",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },{
+        "id": "0008",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },{
+        "id": "0004",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },{
+        "id": "0005",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },{
+        "id": "0006",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      },{
+        "id": "0007",
+        "imgUrl":"//p1.meituan.net/mogu/8ee2022b6ec4070a17cf541a679e6e60137414.jpg@320w_320h_1e_1c",
+        "title": "玫瑰花园自助烤肉（金源店）",
+        "price":"￥73/人",
+        "location": "远大路1.8km",
+        "category":"烤肉自助",
+        "tagone":"远大路烧烤第1名",
+        "tagtwo":"烤鸭不错",
+        "tagthree":"肉串不错",
+        "tagfour":"回头客多",
+        "left":"新客减13",
+        "img":"http://p1.meituan.net/codeman/93231059874052e97c0976c8a6e30dbe910.png",
+        "right":"单人下午茶75元，单人自助76元起，双人自助164元，4人自助326元，6人自助490元，10人自助815元，15人自助1220元，20人自助1630元"
+      }
+    ]
+  }
+}

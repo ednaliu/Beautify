@@ -1,0 +1,138 @@
+{
+  "ret": true,
+  "data": {
+    "list": [
+      {
+        "id": "0001",
+        "class": "#fd9d21",
+        "desc": "美食"
+      },
+      {
+        "id": "0002",
+        "class": "#ff6767",
+        "desc": "猫眼电影"
+      },
+      {
+        "id": "0003",
+        "class": "#8a90fa",
+        "desc": "酒店"
+      },
+      {
+        "id": "0004",
+        "class": "#fed030",
+        "desc": "休闲娱乐"
+      },
+      {
+        "id": "0005",
+        "class": "#fd9d21",
+        "desc": "外卖"
+      },
+      {
+        "id": "0006",
+        "class": "#fed030",
+        "desc": "KTV"
+      },
+      {
+        "id": "0007",
+        "class": "#4dc6ee",
+        "desc": "周边游"
+      },
+      {
+        "id": "0008",
+        "class": "#ff80c2",
+        "desc": "丽人"
+      },
+      {
+        "id": "0009",
+        "class": "#A8DD99",
+        "desc": "小吃快餐"
+      },
+      {
+        "id": "0010",
+        "class": "#f82",
+        "desc": "生活服务"
+      },
+      {
+        "id": "0011",
+        "class": "#00d3be",
+        "desc": "今日新单"
+      },
+      {
+        "id": "0012",
+        "class": "#4dc6ee",
+        "desc": "周边游"
+      },
+      {
+        "id": "0013",
+        "class": "#ff80c2",
+        "desc": "丽人"
+      },
+      {
+        "id": "0009",
+        "class": "#A8DD99",
+        "desc": "小吃快餐"
+      },
+      {
+        "id": "0014",
+        "class": "#f82",
+        "desc": "生活服务"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": "0001",
+        "title": "铁木真",
+        "imgUrl": "//p1.meituan.net/200.0/deal/45243c03ba50024edfd99372cc809c9a35494.jpg",
+        "choose": "[双桥]单人自助",
+        "price": "64.9",
+        "pricede": "门市价:69元",
+        "count": "已售16776"
+      },
+      {
+        "id": "0002",
+        "title": "好伦哥",
+        "imgUrl": "//p1.meituan.net/200.0/deal/2fc77e12891f591e6c50ef85c37a4c3840966.jpg",
+        "choose": "[门头沟城区]单人自助",
+        "price": "55.9",
+        "pricede": "门市价:59元",
+        "count": " 已售44747"
+      },
+      {
+        "id": "0003",
+        "title": "奶茶嫁给粉",
+        "imgUrl": "//p0.meituan.net/200.0/deal/25560fd646292a07e68345d645f5077e61085.jpg@10_0_420_420a%7C267h_267w_2e_100Q",
+        "choose": "[9店通用]10元代金券1张，可叠加",
+        "price": "8.8",
+        "pricede": "门市价:元10元",
+        "count": "已售74347"
+      },
+      {
+        "id": "0004",
+        "title": "玫瑰花园自助烤肉",
+        "imgUrl": "//p0.meituan.net/200.0/deal/2285e446e04d8502236d0450f151ead346456.jpg@126_0_388_388a%7C267h_267w_2e_100Q",
+        "choose": "[2店通用]单人午/晚自助",
+        "price": "82",
+        "pricede": "门市价:89元",
+        "count": "已售68283"
+      },
+      {
+        "id": "0005",
+        "title": "丁丁洋回转自助火锅",
+        "imgUrl": "//p0.meituan.net/200.0/deal/e11c2683d3bdbe8dfddecb41d1c15ae7122001.jpg@350_0_1116_1116a%7C267h_267w_2e_90Q",
+        "choose": "[4店通用]单人自助火锅",
+        "price": "39.9",
+        "pricede": "门市价:42.5",
+        "count": "已售399342"
+      },
+      {
+        "id": "0006",
+        "title": "北京全聚德",
+        "imgUrl": "//p1.meituan.net/200.0/deal/ebee186962d71b90044b46422df4faa540449.jpg@114_0_381_381a%7C267h_267w_2e_90Q",
+        "choose": "[天安门广场]精品烤鸭3-4人餐1份",
+        "price": "418",
+        "pricede": "门市价:523元",
+        "count": "已售5920"
+      }
+    ]
+  }
+}
