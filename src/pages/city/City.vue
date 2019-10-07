@@ -1,7 +1,7 @@
 <template>
   <div>
     <city-header></city-header>
-    <city-content :cities='cities'></city-content>
+    <city-content :cities='cities' :hotCities='hotCities'></city-content>
   </div>
 </template>
 
@@ -17,7 +17,8 @@
     },
     data(){
       return{
-        cities:{}
+        cities:{},
+        hotCities:[]
       }
     },
     methods:{
@@ -28,6 +29,7 @@
           // console.log(res.data)
           if(res.data.ret && data){
             this.cities = data.cities
+            this.hotCities = data.hotCities
           }
         })
       }

@@ -4,13 +4,15 @@
       <swiper :options="swiperOption">
         <swiper-slide v-for='(page, index) in pages' :key='index'>
           <div class='whole'>
-            <div class="iconall" v-for='item in page' :key='item.id'>
-              <router-link :to='/food/+item.id' >
-                <div class="icon" :style='{backgroundColor:item.class}'>
-                  <span class="iconfont icon-img">&#xe604;</span>
+            <div v-for='item in page' :key='item.id' class="icon-item">
+              <router-link :to='/food/+item.id' tag='div'>
+                <div class="iconall">
+                  <div class="icon" :style='{backgroundColor:item.class}'>
+                    <span class="iconfont icon-img">&#xe604;</span>
+                  </div>
+                  <p class="icon-desc">{{item.desc}}</p>
                 </div>
-                <p class="icon-desc">{{item.desc}}</p>
-            </router-link>
+              </router-link>
             </div>
           </div>
         </swiper-slide>
@@ -27,71 +29,17 @@
         swiperOption: {
           pagination: {
             el: '.swiper-pagination'
-          },
-        },
-        "list": [{
-          "id": "0001",
-          "class": "#fd9d21",
-          "desc": "美食"
-        },
-        {
-          "id": "0002",
-          "class": "#ff6767",
-          "desc": "猫眼电影"
-        },
-        {
-          "id": "0003",
-          "class": "#8a90fa",
-          "desc": "酒店"
-        },
-        {
-         "id": "0004",
-          "class": "#fed030",
-          "desc": "休闲娱乐"
-        },
-        {
-          id: '0005',
-          class: '#fd9d21',
-          desc: '外卖'
-        },
-        {
-          id: '0006',
-          class: '#fed030',
-          desc: 'KTV'
-        },
-        {
-          id: '0007',
-          class: '#4dc6ee',
-          desc: '周边游'
-        },
-        {
-          id: '0008',
-          class: '#ff80c2',
-          desc: '丽人'
-        },
-        {
-          id: '0009',
-          class: '#A8DD99',
-          desc: '小吃快餐'
-        },
-        {
-          id: '0010',
-          class: '#f82',
-          desc: '生活服务'
-        },
-        {
-          id: '0011',
-          class: '#00d3be',
-          desc: '今日新单'
-        },
-
-        ]
+          }
+        }
       }
+    },
+    props: {
+      lists: Array
     },
     computed: {
       pages() {
         const pages = [];
-        this.list.forEach((item, index) => {
+        this.lists.forEach((item, index) => {
           const page = Math.floor(index / 10);
           if (!pages[page]) {
             pages[page] = []
@@ -110,9 +58,10 @@
     color: #fff;
   }
 
-  .swiper-pagination{
+  .swiper-pagination {
     position: static;
   }
+
   .swiper-pagination /deep/ .swiper-pagination-bullet-active {
     background-color: red;
     /* margin-top: .5rem; */
@@ -128,8 +77,14 @@
     .whole {
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+
+      .icon-item {
+        flex: 0 0 20%;
+      }
 
       .iconall {
+        margin: auto;
         width: 1.5rem;
         height: 1.62rem;
         display: flex;
@@ -138,7 +93,6 @@
         justify-content: center;
 
         .icon {
-          /* background-color: ; */
           height: .8rem;
           line-height: .8rem;
           text-align: center;
@@ -146,8 +100,10 @@
           border-radius: .4rem;
           margin-bottom: .15rem;
         }
-        .icon-desc{
-          color:#666;
+
+        .icon-desc {
+          color: #666;
+          text-align: center
         }
       }
     }

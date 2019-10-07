@@ -3,7 +3,7 @@
     <div class="header">
       <div class="header-left">
         <router-link to='/city' tag='div'>
-          北京
+          {{this.city}}
           <span class="iconfont city">&#xe63b;</span>
         </router-link>
       </div>
@@ -32,8 +32,14 @@
   </div>
 </template>
 <script>
+  import {mapMutations, mapState} from 'vuex'
   export default {
-    name: 'HomeHeader'
+    name: 'HomeHeader',
+    computed:{
+        ...mapState({
+          city:'city'
+        })
+      },
   }
 </script>
 <style lang='less' scoped>

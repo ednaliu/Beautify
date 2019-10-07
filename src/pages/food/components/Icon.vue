@@ -14,50 +14,8 @@
 <script>
   export default {
     name: 'FoodIcon',
-    data() {
-      return {
-        list: [{
-          "id": "0001",
-          "class": "#fd9d21",
-          "desc": "美食"
-        },
-        {
-          "id": "0002",
-          "class": "#ff6767",
-          "desc": "猫眼电影"
-        },
-        {
-          "id": "0003",
-          "class": "#8a90fa",
-          "desc": "酒店"
-        },
-        {
-          "id": "0004",
-          "class": "#fed030",
-          "desc": "休闲娱乐"
-        },
-        {
-          id: '0005',
-          class: '#fd9d21',
-          desc: '外卖'
-        },
-        {
-          id: '0006',
-          class: '#fed030',
-          desc: 'KTV'
-        },
-        {
-          id: '0007',
-          class: '#4dc6ee',
-          desc: '周边游'
-        },
-        {
-          id: '0008',
-          class: '#ff80c2',
-          desc: '丽人'
-        }
-        ]
-      }
+    props:{
+      list:Array
     }
   }
 
@@ -79,7 +37,6 @@
       justify-content: center;
 
       .icon {
-        /* background-color: ; */
         height: .9rem;
         line-height: .9rem;
         text-align: center;

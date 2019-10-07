@@ -1,9 +1,11 @@
 let state = {
   defaultcolor :'',
-  changebackground : ''
+  changebackground : '',
+  city:'天津'
 } 
 
 export default {
   color: state.defaultcolor,
-  background: state.changebackground
+  background: state.changebackground,
+  city:state.city
 }

@@ -112,9 +112,6 @@
       }
 
       .header-right {
-        /* margin-left: .2rem; */
-        /* color: red; */
-
         .header-right-img {
           height: .47rem;
         }

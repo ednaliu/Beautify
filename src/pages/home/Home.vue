@@ -1,7 +1,7 @@
 <template>
   <div>
       <home-header></home-header>
-      <home-icon></home-icon>
+      <home-icon :lists='homeiconList'></home-icon>
       <home-recommend :list='list'></home-recommend>
       <home-footer></home-footer>
   </div>
@@ -22,17 +22,18 @@
     },
     data(){
       return {
-        list:[]
+        list:[],
+        homeiconList:[]
       }
     },
     methods:{
       getHomeInfo(){
         axios.get('/api/index.json') ////在config里面的index proxyTable进行了配置
         .then((res)=>{
-          // console.log(res.data.data)
           let data = res.data.data
           if(res.data.ret && data){
             this.list = data.recommendList
+            this.homeiconList = data.list
           }
         })
         .catch((err)=>{

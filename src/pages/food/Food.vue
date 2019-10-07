@@ -1,7 +1,7 @@
 <template>
   <div class="food">
     <food-header></food-header>
-    <food-icon></food-icon>
+    <food-icon :list='iconlist'></food-icon>
     <food-detail :list='foodList' ></food-detail>
   </div>
 </template>
@@ -21,17 +21,17 @@
     data(){
       return{
         foodList:[],
-        
+        iconlist:[]
       }
     },
     methods:{
       requestFoodList(){
         axios.get('/api/food.json') ////在config里面的index proxyTable进行了配置
         .then((res)=>{
-          // console.log(res.data.data)
           let data = res.data.data
           if(res.data.ret && data){
             this.foodList = data.foodList
+            this.iconlist = data.list
           }
         })
         .catch((err)=>{
@@ -40,7 +40,6 @@
       }
     },
     mounted(){
-      // console.log('food')
       this.requestFoodList()
     }
   }
@@ -48,7 +47,6 @@
 </script>
 <style lang='less' scoped>
   .food{
-    /* background:red; */
     overflow: hidden;
   }
 

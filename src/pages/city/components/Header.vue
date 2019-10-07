@@ -9,8 +9,6 @@
       <div class="city">选择城市</div>
       <div class="house">
         <span class="iconfont icon">&#xe63d;</span>
-      </div>
-      <div class="search">
         <span class="iconfont icon">&#xe615;</span>
       </div>
     </div>

@@ -8,41 +8,45 @@
       </div>
       <div class="visited">
         <h4 class="latestevisited title">最近访问</h4>
-        <div class="city row">上海</div>
+        <div class="city row">{{this.city}}</div>
       </div>
       <div class="visited">
         <h4 class="latestevisited title">热门城市</h4>
         <div class="hotcity table">
-          <div class="rows">
-            <div>北京</div>
-            <div>上海</div>
-            <div>广州</div>
-            <div>深圳</div>
-            <div>天津</div>
-            <div>重庆</div>
-            <div>西安</div>
-            <div>杭州</div>
-            <div>南京</div>
-            <div>武汉</div>
-            <div>成都</div>
-          </div>
-        </div>
-      </div>
-      <div class="allcity">
-        <div class="alphabet">
-          <div class="row">
+          <div class="rows" v-for='item in hotCities' :id=item.id
+          @click='handleCityClick(item.name)'>
+            <div class="item">{{item.name}}</div>
           </div>
         </div>
       </div>
     </div>
+    <city-list :cities='cities'  ></city-list>
   </div>
 </template>
 
 <script>
+  import CityList from './List.vue'
+  import {mapMutations, mapState} from 'vuex'
   export default {
-    name :'CityContend',
-    props:{
-      cities:Object
+    name: 'CityContend',
+    props: {
+      cities: Object,
+      hotCities: Array
+    },
+    components:{
+      CityList
+    },
+    computed:{
+        ...mapState({
+          city:'city'
+        })
+      },
+    methods:{
+      ...mapMutations(['changecity']), 
+      handleCityClick(city){
+        this.$router.push('/')
+        this.changecity(city)
+      },
     }
   }
 
@@ -71,7 +75,7 @@
 
   .contents {
     background: #cccccc05;
-    height: 100rem;
+    /* height: 100rem; */
 
     .content {
       color: #333;
@@ -81,7 +85,6 @@
       flex-direction: column;
       justity-content: space-between;
 
-      /* align-items: center; */
       .location {
         .icon {
           color: #FE8C00;
@@ -97,26 +100,20 @@
         height: 2.4rem;
         border-radius: .06rem;
         background: #fff;
-        width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-wrap: wrap;
 
         .rows {
-          width: 100%;
-          display: flex;
-          /* flex-direction:row; */
-          flex-wrap: wrap;
-          justify-content: flex-start;
-          /* align-items: center; */
+          height: .8rem;
+          line-height: .8rem;
+          box-sizing: border-box;
+          flex: 0 0 25%;
+          text-align: center;
 
-          div {
-            height: .8rem;
-            line-height:.8rem;
-            box-sizing: border-box;
-            flex: 0 0 25%;
-            /* border: 1px solid red; */
-            text-align: center;
+          .item {
+            border-bottom: .5px solid #ccc;
+            border-right: .5px solid #ccc;
+
           }
         }
       }
