@@ -2,7 +2,7 @@
   <div class="whole">
     <div class="guall">
       <div class="guess">猜你喜欢</div>
-      <div class="left-right" v-for='item in list' :key='item.id'>
+      <div class="left-right" v-for='item in list' :key='item.id' @click='handleclick(item.id)'>
         <div class="left">
           <div>
             <img class="img" :src="item.imgUrl" alt="">
@@ -32,6 +32,11 @@
     name: "HomeRecommend",
     props: {
       list: Array
+    },
+    methods:{
+      handleclick(id){
+        this.$router.push('/detail/' +id)
+      }
     }
   }
 </script>

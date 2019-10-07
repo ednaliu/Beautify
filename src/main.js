@@ -9,7 +9,10 @@ import 'styles/border.css'
 import 'styles/iconfont.css'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css' // require styles
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(VueAwesomeSwiper)
+Vue.use(ElementUI);
 
 Vue.config.productionTip = false
 
