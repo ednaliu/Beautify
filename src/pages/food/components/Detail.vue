@@ -56,6 +56,8 @@
 
 </script>
 <style lang='less' scoped>
+  @import '../../../assets/styles/mixins.less';
+
   .detail-list {
     background: #fff;
     width: 100%;
@@ -85,7 +87,6 @@
     .list {
       height: 2.82rem;
       margin-left: .2rem;
-      /* color: #666; */
       font-size: .24rem;
       width: 100%;
       background: #fff;
@@ -101,7 +102,6 @@
           margin-top: .2rem;
           width: 100%;
 
-          /* flex-direction: column; */
           .left {
             .left-img {
               width: 1.6rem;
@@ -117,10 +117,7 @@
             justify-content: center;
             max-width: 5.3rem;
             padding-right: .2rem;
-            /* flex:1; */
-            /* width: 546rem; */
 
-            /* align-items: center; */
             .right-header {
               font-size: 0.34rem;
               font-weight: 500;
@@ -128,16 +125,11 @@
             }
 
             .right-price {
-              /* 使用flex布局会导致右边一部分内容不可见*/
-              /* display: flex;
-              align-items: center;
-              justify-content: space-between; */
               position: relative;
               margin-bottom: .2rem;
 
               .star {
-                color: #fa952f;
-                margin: -0.08rem;
+                .star;
               }
 
               .location {
@@ -154,9 +146,8 @@
               height: .33rem;
               line-height: .33rem;
               vertical-align: baseline;
-              overflow: hidden;
-              white-space: nowrap;
-              text-overflow: ellipsis;
+
+              .ellipsis;
 
               span:not(.category) {
                 margin-left: .08rem;
@@ -166,9 +157,7 @@
 
               .right {
                 flex: 1;
-                overflow: hidden;
-                white-space: nowrap;
-                text-overflow: ellipsis;
+                .ellipsis;
               }
             }
           }
@@ -180,7 +169,6 @@
           margin-top: .12rem;
           margin-right: .2rem;
           height: .8rem;
-          /* justify-content: space-around; */
           align-items: center;
 
           div {
@@ -206,8 +194,7 @@
           .right {
             flex: 1;
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            .ellipsis;
           }
         }
       }

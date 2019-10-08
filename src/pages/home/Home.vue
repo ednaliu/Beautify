@@ -28,7 +28,11 @@
     },
     methods:{
       getHomeInfo(){
-        axios.get('/api/index.json') ////在config里面的index proxyTable进行了配置
+        let url = '/api/index.json'
+        if (process.env.NODE_ENV === 'production') {
+          url = '/static/mock/index.json'
+        }
+        axios.get(url) ////在config里面的index proxyTable进行了配置
         .then((res)=>{
           let data = res.data.data
           if(res.data.ret && data){
