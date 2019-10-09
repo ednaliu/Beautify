@@ -47,7 +47,7 @@
 
   .header {
     display: flex;
-    background-color: @bgColor;
+    background-image: linear-gradient(135deg, #FFD000 0%, #FFBD00 100%);
     display: flex;
     height: @headerHeight;
     line-height: @headerHeight;
