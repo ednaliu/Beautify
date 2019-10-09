@@ -51,25 +51,28 @@
     watch: {
       letters() {
         const element = this.$refs[this.letters][0]//dom元素
-        // console.log(element.offsetTop + 'offsetTop')
-        // console.log(element.offsetHeight +'offsetHeight')
-        // console.log(element.scrollHeight +'scrollHeight')
-        // console.log(element.scrollTop +'scrollTop')
+
         //  TODO: 跳转无效，需要研究B-Scroll使用原理方法
         // const element = this.$refs[this.letters][0]//dom元素
         // this.scroll.scrollToElement(element)
         // 暂定解决方法
         // 不用B-Scoll，也可实现。
-        document.documentElement.scrollTop = element.offsetTop
-        // console.log(document.body.scrollTop)
+        if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+          // alert('手机端')
+          document.body.scrollTop = element.offsetTop
+        } else {
+          // alert('电脑端')
+          document.documentElement.scrollTop = element.offsetTop
+          // console.log(document.body.scrollTop)
+        }
       }
-    },
-    mounted() {
-      // this.scroll = new BScroll(this.$refs.letterwrapper,{
-      //   click:true//不设置的话，使用better-scroll里面的click事件不可点击
-      // })//创建滑动功能
+      },
+      mounted() {
+        // this.scroll = new BScroll(this.$refs.letterwrapper,{
+        //   click:true//不设置的话，使用better-scroll里面的click事件不可点击
+        // })//创建滑动功能
+      }
     }
-  }
 
 </script>
 <style lang='less' scoped>

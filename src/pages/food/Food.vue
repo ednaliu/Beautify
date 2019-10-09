@@ -57,7 +57,8 @@
 </script>
 <style lang='less' scoped>
   .food {
-    overflow: hidden;
+    /* overflow: hidden; */
+
 
     .footer {
       text-align: center;

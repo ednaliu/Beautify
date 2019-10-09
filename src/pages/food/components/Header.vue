@@ -2,7 +2,7 @@
   <div class="food">
     <div class="header-search" :class='background'>
       <div class="header-left">
-        <router-link to='/' tag='div' >
+        <router-link to='/' tag='div'>
           <span class="iconfont city" :class='color'>&#xe667;</span>
         </router-link>
       </div>
@@ -21,34 +21,33 @@
 </template>
 
 <script>
-    import {mapState, mapMutations} from 'vuex'
+  import { mapState, mapMutations } from 'vuex'
   export default {
     name: 'FoodHeader',
     data() {
       return {
-        classcolor:'', //将头部字体图标颜色改变。
-        changebackground:'' //将头部背景色改变
+        classcolor: '', //将头部字体图标颜色改变。
+        changebackground: '' //将头部背景色改变
       }
     },
-    computed:{
-    ...mapState(['color', 'background'])
-  },
+    computed: {
+      ...mapState(['color', 'background'])
+    },
     methods: {
-      ...mapMutations(['changecolor']), 
+      ...mapMutations(['changecolor']),
       handleScroll() {
-        const top = document.documentElement.scrollTop 
-        if(top>110){
-          this.changecolor({classcolor: 'color', changebackground: 'background'})
+        const top = document.body.scrollTop || document.documentElement.scrollTop
+        if (top > 110) {
+          this.changecolor({ classcolor: 'color', changebackground: 'background' })
           //classcolor 将头部字体图标颜色改变。
           // changebackground 将头部背景色改变
-        }else{
+        } else {
           this.changecolor({})
         }
       }
     },
     mounted() {
       window.addEventListener('scroll', this.handleScroll)
-      // console.log(this.background +'header')
     },
     destoryed() {
       window.removeEventListener('scroll', this.handleScroll)
@@ -63,14 +62,17 @@
     font-weight: 700;
 
   }
-  .color{
+
+  .color {
     color: #06c1ae;
   }
-  .changecolor{
+
+  .changecolor {
     color: #06c1ae;
   }
-  .background{
-    background:#fff;
+
+  .background {
+    background: #fff;
   }
 
   .inputicon {
@@ -79,44 +81,46 @@
   }
 
   .food {
-    .header {
-      height: 2.2rem;
-      width: 7.5rem;
-      background: url("//s1.meituan.net/bs/file?f=meis/meishi.mobile:img/app_download_banner.png@7732de7") repeat-x;
-      background-size: cover;
-      background-repeat: repeat;
+    background: url("//s1.meituan.net/bs/file?f=meis/meishi.mobile:img/app_download_banner.png@7732de7");
+
+    /* .header { */
+       height: 2.2rem;
+      /* width: 7.5rem;  */
+      background-size: contain;
+      /* background-repeat: repeat; */
       border-bottom: 1px solid #DDD8CE;
-    }
+      /* } */
 
-    .header-search {
-      height: .9rem;
-      width: 100%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      position: fixed;
-      left: 0;
-      top: 0;
-      right: 0;
-      z-index: 999;
-      .header-left {}
-
-      .header-input {
+      .header-search {
+        height: .9rem;
+        width: 100%;
         display: flex;
-        flex: 0 0 75%;
+        justify-content: space-around;
         align-items: center;
-        background-color: #ebeced;
-        padding: .1rem;
-        box-sizing: border-box;
-        border-radius: 11.3rem;
-      }
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        z-index: 999;
 
-      .header-right {
-        .header-right-img {
-          height: .47rem;
+        .header-left {}
+
+        .header-input {
+          display: flex;
+          flex: 0 0 75%;
+          align-items: center;
+          background-color: #ebeced;
+          padding: .1rem;
+          box-sizing: border-box;
+          border-radius: 11.3rem;
+        }
+
+        .header-right {
+          .header-right-img {
+            height: .47rem;
+          }
         }
       }
-    }
 
-  }
+    }
 </style>

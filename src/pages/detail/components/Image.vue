@@ -62,8 +62,9 @@
         this.showgallary = false
       },
       handleScroll() {
-        const top = document.documentElement.scrollTop
+        const top = document.body.scrollTop || document.documentElement.scrollTop
         if (top > 355) {
+          console.log('top>355')
           this.classvar = 'topfix';
         } else {
           this.classvar = '';
@@ -98,7 +99,7 @@
     position: fixed;
     bottom: .8rem;
     right: 0.2rem;
-    heigth: .86rem;
+    height: .86rem;
     width: .86rem;
     text-align: center;
     line-height: .86rem;
@@ -110,7 +111,7 @@
   .detail {
     .top {
       background: url("//p1.meituan.net/deal/dcd57da5ef098fcd42d4da61bfec924782325.jpg");
-      width: 7.5rem;
+      /* width: 7.5rem; */
       height: 3.9rem;
       background-size: cover;
       position: relative;

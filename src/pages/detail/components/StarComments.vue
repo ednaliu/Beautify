@@ -148,8 +148,8 @@
       font-size:.28rem;
       padding-left:.2rem;
       span{
-        position: absolute;
-        right:.5rem;
+        /* position: absolute; */
+        /* right:.5rem; */
       }
     }
 

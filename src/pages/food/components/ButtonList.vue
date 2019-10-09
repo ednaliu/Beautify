@@ -89,7 +89,7 @@
       return {
         show: [0, 0, 0, 0],
         classVar: '',
-        classpos:''
+        classpos: ''
       }
     },
     methods: {
@@ -106,10 +106,15 @@
         this.changecolor({})
       },
       handleScroll() {
-        const top = document.documentElement.scrollTop 
-        if(top>250){
+        // if ((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))) {
+        //   const top = document.body.scrollTop
+        // } else {
+        //   const top = document.documentElement.scrollTop
+        // }
+        const top = document.body.scrollTop || document.documentElement.scrollTop
+        if (top > 250) {
           this.classpos = 'fixed'
-        }else{
+        } else {
           this.classpos = ''
         }
       }
@@ -119,7 +124,7 @@
     },
     destoryed() {
       window.removeEventListener('scroll', this.handleScroll)
-    }     
+    }
   }
 
 </script>
@@ -127,6 +132,7 @@
   .actived {
     color: #06c1ae;
   }
+
   /* 点击fix */
   .divfixed {
     position: fixed;
@@ -136,8 +142,10 @@
     background-color: #000000b3;
     overflow-y: scroll;
     z-index: 100;
+    -webkit-overflow-scrolling: touch;
   }
-/* 滑动fix */
+
+  /* 滑动fix */
   .fixed {
     position: fixed;
     top: .68rem;
@@ -185,6 +193,7 @@
           line-height: .84rem;
 
         }
+
         div:first-child {
           padding-left: .6rem;
           color: #06c1ae;

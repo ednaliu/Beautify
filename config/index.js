@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        target:'http://localhost:8080',
+        target:'http://192.168.0.100:8080',//这里也要修改一下
         pathRewrite:{
           '^/api':'/static/mock'
         }
@@ -20,7 +20,7 @@ module.exports = {
     },
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: '192.168.0.100', // 这里填写刚查到的电脑的IP，然后运行项目，手机连到和电脑同一个WIFI，手机浏览器输入电脑的IP加端口就可以访问了
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

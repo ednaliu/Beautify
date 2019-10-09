@@ -37,13 +37,13 @@
     font-weight: 600;
   }
   .imgs{
-      overflow: hidden;
+      /* overflow: hidden; */
       width: 100%;
-      height: 0;
-      padding-bottom: 29%;
+      /* height: 0; */
+      /* padding-bottom: 29%; */
       /* background: #ccc; */
       .img{
-        width: 7.5rem;
+        /* width: 7.5rem; */
         height: 2.2rem;
         background: url("//s1.meituan.net/bs/file?f=meis/meishi.mobile:img/app_download_banner.png@7732de7");
         background-size: contain;

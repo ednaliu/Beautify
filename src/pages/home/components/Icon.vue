@@ -68,11 +68,11 @@
   }
 
   .all {
-    overflow: hidden;
-    height: 0;
-    width: 100%;
+    /* overflow: hidden; */
+    /* height: 0; */
+    /* width: 100%; */
     background-color: #fff;
-    padding-bottom: 48%;
+    /* padding-bottom: 48%; */
 
     .whole {
       display: flex;

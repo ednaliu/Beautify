@@ -71,9 +71,12 @@
 
 </script>
 <style lang='less' scoped>
+  html,body{overflow:hidden;overflow-y:auto;}
   .background{
     background:#f0f0f0;
-    height: 80rem;
+    width:100%;
+    /* height: 80rem; */
+    /* overflow-x: scroll; */
     .self-color{
       /* color:red!important; */
       /* background:red; */
